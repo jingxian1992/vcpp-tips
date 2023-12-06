@@ -1,0 +1,12 @@
+使用PlaySound函数的准备工作
+在VS2010里面，只需要在软件的附加依赖项里面，添加winmm.lib。
+然后就可以在程序里面使用PlaySound函数了。不需要声明。
+而若是在VS2017里面，除了需要添加winmm.lib到附加依赖项里面
+之外，还需要包含mmsystem.h头文件。也就是需要下面的一行代码：
+#include <mmsystem.h>
+
+PlaySound()函数有三个参数，第一个参数为歌曲名字符串，为NULL时表示停止播放。
+第二个参数通常为NULL。第三个参数可以设置为SDN_ASYNC，表示异步播放
+
+PlaySound函数的调用示例
+PlaySound(TEXT("D:\\FFOutput\\魏小涵 - 云散月现.wav"), NULL, SND_FILENAME | SND_ASYNC);
