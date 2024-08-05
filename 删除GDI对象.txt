@@ -1,0 +1,8 @@
+1.  如果在栈上创建了CPen，CBrush，CFont或其他CGdiObject，
+那么在CGdiObject超出范围时，相关的GDI对象就会自动被删除。
+2.  如果用new在堆上创建了一个CGdiObject，则在特定时刻一定要删除它，
+以便调用它的析构函数。
+3.  与CGdiObject相关联的GDI对象可以通过调用CGdiObject::DeleteObject
+被显式地删除 。
+4.  如果是备用对象，即便是由CreateStockObject创建的备用对象，也没必
+要专门删除它。
