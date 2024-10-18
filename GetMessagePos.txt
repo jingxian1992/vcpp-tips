@@ -1,0 +1,11 @@
+DWORD dwPos = ::GetMessagePos();
+x = LOWORD(dwPos);
+y = HIWORD(dwPos);
+CPoint point(x, y);
+ScreenToClient(&point);
+
+GetMessagePos()函数是获取本条消息里面，鼠标指针所在的   
+屏幕坐标位置。返回结果为DWORD类型，也就是unsigned int类型。   
+低2字节为x坐标位置，高2字节为y坐标位置。   
+注意，所获取的坐标，是屏幕坐标，可用ScreenToClient   
+将其转换为客户区坐标。

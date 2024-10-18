@@ -1,0 +1,18 @@
+CString str, str1;
+str.GetLength():本函数获取字符串长度。是字符个数，而非   
+字节长度。
+
+str1 = str.Left(n):n是一个整型数，本函数返回str中的左边n个字符   
+所组成的字符串。
+
+str2 = str.Right(n):本函数返回str中的右边数n个字符所组   
+成的字符串。
+
+str.Empty()：清空str字符串。
+
+char ch = 'G';
+int index = 3;
+str.SetAt(index, ch);
+将字符型变量ch中的字符赋给CString对象str中，索引为3的位置。
+假定原本str为"TangTaiZong"，则执行完函数以后，str为   
+"TanGTaiZong"。

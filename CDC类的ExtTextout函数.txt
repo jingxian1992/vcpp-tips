@@ -1,0 +1,6 @@
+pDC->ExtTextout(x, y, ETO_OPAQUE, rect,
+str, NULL);
+在(x, y)位置开始，打印字符串str。整个字符串，   
+并不会限制在rect矩形中显示。显示位置仅与x坐标与   
+y坐标有关在绘制字符串之前，先用pDC所包含的背景   
+颜色擦除rect矩形区域。

@@ -1,0 +1,17 @@
+SetRect()函数，SetRect(left, top, right, bottom).
+
+CalcWindowRect(&rect)：rect中保存着客户区尺寸，根据客户   
+区尺寸，计算出整个的窗口尺寸，包括标题栏，菜单栏，状态栏等等。
+
+dc.DrawEdge(rect, EDGE_SUNKEN, BF_RECT):rect为一个矩形，将第   
+2和第3个参数如示例中设置，就可以为这个矩形绘制3D边框了。
+
+rect.PtInRect(point):rect是一个CRect对象，point是一个   
+CPoint对象。本函数是测试point所标记的点是否位于rect所标记   
+的矩形里面。
+
+rect.InflateRect(cx, cy):将矩形rect的左右方向增加cx个单位，   
+上下方向增加cy个单位。若cx或cy为负数，就会减小相应绝对值的尺寸。
+
+rect.DeflateRect(cx, cy)：将矩形rect的左右方向减少cx个单位，   
+上下方向减少cy个单位。
